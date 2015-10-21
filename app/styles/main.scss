@@ -1,0 +1,74 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
+// endbower
+
+$darkBrown: #614D40;
+$lightCloud: #F5F5F5;
+$lightBrown: #AD8965;
+$darkTan: #B89B6D;
+$greenGray: #9FAD9F;
+$lightTan: #D4AD6E;
+$darkCloud: #E5E2D1;
+$sand: #E1D19F;
+$lightFire: #E6BD00;
+
+$lightBG: $lightCloud;
+$importantBg: $lightFire;
+// Components
+.btn-sand {
+  background-color: $importantBg;
+  color: white;
+  &:hover, &:focus {
+    background-color: $darkTan;
+    color: white;
+    outline: none;
+  }
+
+}
+// End Components
+
+body {
+  background-color: $lightBG;
+  width: 100vw;
+  height: 100vh;
+  .heroContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    img {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  .hoverBox {
+    background-color: $lightBG;
+    border-radius: 3px;
+    top: 50vh;
+    min-height: 50vh;
+    .searchContainer {
+      border-bottom: 2px solid $sand;
+      #searchInput {
+        width: 100%;
+        border: none;
+
+        background-color: $lightBG;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        font-size: 18px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+// injector
+// endinjector

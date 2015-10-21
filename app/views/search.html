@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-xs-12 hoverBox">
+    <div class="row searchContainer">
+      <div class="col-sm-8">
+        <input type="text" name="search" placeholder="Search for movies, actors, or anything else." data-ng-model="searchInput" data-ng-change="updateInput()" id="searchInput" criteria="searchCrit">
+      </div>
+    </div>
+    <div class="row critContainer">
+      <div class="col-sm-12">
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-sand" data-ng-click="clickMovies()">Movies <i data-ng-if="searchCrit.movies" class="fa fa-check">C</i></button>
+          <button type="button" class="btn btn-sand" data-ng-click="clickActors()">Actors <i data-ng-if="searchCrit.actors" class="fa fa-check">C</i></button>
+          <button type="button" class="btn btn-sand" data-ng-click="clickDirectors()">Directors <i data-ng-if="searchCrit.directors" class="fa fa-check">C</i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row resultsContainer">
+      <div class="col-sm-12 col-md-6 col-lg-4" data-ng-repeat="point in results">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">{{getTitle(point)}}</h4>
+            <p class="card-text">{{point.description || point.age}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
